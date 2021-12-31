@@ -5,7 +5,8 @@
 
 #section-intro {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-start;}
 .intro-label {width: 500px; height: 1000px; background-color: #b56576; box-shadow: 4px 0 5px rgba(0,0,0,0.3);}
-.intro-label h2 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.6rem; font-weight: 400; text-align: center; line-height: 1000px;}
+.intro-label h2 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.6rem; font-weight: 400; text-align: center; line-height: 500px;}
+.intro-img {position: absolute; margin-top: 400px; margin-left: 20%;}
 
 #section-portfolio {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-end;}
 .portfolio-label {position: relative; right: 0; width: 200px; height: 1000px; background-color: #6d597a; box-shadow: -4px 0 5px rgba(0,0,0,0.3);}
