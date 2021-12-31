@@ -6,16 +6,20 @@
 #section-intro {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-start;}
 .intro-label {width: 500px; height: 1000px; background-color: #b56576; box-shadow: 4px 0 5px rgba(0,0,0,0.3);}
 .intro-label h2 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.6rem; font-weight: 400; text-align: center; line-height: 500px;}
-.intro-img {position: absolute; margin-top: 400px; margin-left: 20%;}
+.intro-img {position: absolute; margin-top: 400px; margin-left: 20%; }
 
 #section-portfolio {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-end;}
 .portfolio-label {position: relative; right: 0; width: 200px; height: 1000px; background-color: #6d597a; box-shadow: -4px 0 5px rgba(0,0,0,0.3);}
 .portfolio-label h3 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.2rem; font-weight: 400; text-align: center;}
-.portfolio-main {position: relative; display: inline-flex; flex-wrap: wrap;}
-.portfolio-main div {position: relative; display: flex; flex-wrap: wrap; }
-.portfolio-main div > ul {position: relative; display: flex; flex-wrap: nowrap; justify-content: space-between; }
-#co_illust li {width: 120px ; height: 480px; margin-right: 5px; background-color: #ccc;}
-#co_illust a:hover {opacity: 0.7;}
+.portfolio-main {position: static; width: calc( 100% - 200px);}
+.portfolio-main div {position: relative; display: flex; flex-wrap: wrap; margin-bottom: 30px;}
+.portfolio-main div > ul {position: relative; display: flex; flex-wrap: nowrap;}
+.pf-nav {font-size: 0.9rem; position: relative; display: flex; justify-content: flex-end; right: 10px;}
+.pf-nav li > a {padding: 0 5px; border-right: 1px solid #ccc;}
+.pf-nav li > a:hover {color: #fff; background-color: #e56b6f;}
+.pf-nav li > b {font-weight: 300; color: #fff; background-color: #e56b6f; padding: 0 10px; border-radius: 12px;}
+#pf-illust li {width: 120px ; height: 480px; margin-right: 5px; background-color: #ccc;}
+#pf-illust a:hover {opacity: 0.7;}
 
 #section-about {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-start;}
 .about-label {width: 400px; height: 1000px; background-color: #355070; box-shadow: 4px 0 5px rgba(0,0,0,0.3);}
