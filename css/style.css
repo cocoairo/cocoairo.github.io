@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+#wrap {max-width:100%;}
+
+
+#section-intro {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-start;}
+.intro-label {width: 500px; height: 1000px; background-color: #b56576; box-shadow: 4px 0 5px rgba(0,0,0,0.3);}
+.intro-label h2 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.6rem; font-weight: 400; text-align: center; line-height: 1000px;}
+
+#section-portfolio {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-end;}
+.portfolio-label {position: relative; right: 0; width: 200px; height: 1000px; background-color: #6d597a; box-shadow: -4px 0 5px rgba(0,0,0,0.3);}
+.portfolio-label h3 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.2rem; font-weight: 400; text-align: center;}
+.portfolio-main {position: relative; display: inline-flex; flex-wrap: wrap;}
+.portfolio-main div {position: relative; display: flex; flex-wrap: wrap; }
+.portfolio-main div > ul {position: relative; display: flex; flex-wrap: nowrap; justify-content: space-between; }
+#co_illust li {width: 120px ; height: 480px; margin-right: 5px; background-color: #ccc;}
+#co_illust a:hover {opacity: 0.7;}
+
+#section-about {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-start;}
+.about-label {width: 400px; height: 1000px; background-color: #355070; box-shadow: 4px 0 5px rgba(0,0,0,0.3);}
+.about-label h3 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.2rem; font-weight: 400; text-align: center; line-height: 1000px;}
+.about-main {position: relative; display: flex; flex-wrap: nowrap; justify-content: space-between;}
+#aboutco {width: 240px; height: 240px; border-radius: 120px; overflow: hidden;}
+
+#intervalA {height: 400px; background-color: #b56576; overflow: hidden;}
+#intervalB {height: 400px; background-color: #6d597a;overflow: hidden;}
+
