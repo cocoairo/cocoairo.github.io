@@ -1,25 +1,31 @@
 @charset "utf-8";
 
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
 #wrap {max-width:100%;}
 
+#topButton {position: fixed; right: 2%; bottom: 50px; display: none; z-index: 999;}
 
 #section-intro {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-start; height: 1000px; overflow: hidden;}
-.intro-label {width: 500px; height: 1000px; background-color: #b56576; box-shadow: 4px 0 5px rgba(0,0,0,0.3); z-index: 99;}
+.intro-label {width: calc(100% - 1060px); background-color: #b56576; box-shadow: 4px 0 5px rgba(0,0,0,0.3); z-index: 99;}
 .intro-label h2 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.6rem; font-weight: 400; text-align: center; line-height: 500px;}
 .intro-img {position: absolute; bottom: 0px; margin-left: 10%; z-index: 100;}
-.intro-main {z-index: 98;}
+.intro-main {max-width: 1060px; z-index: 98;}
 .toon1 {position: relative; width: 1000px; height: 330px; background: url(../image/intro/Rectangle1.png) no-repeat 120px 30px; }
+.toon1 span{position: relative; left:200px; top:100px; font-size: 2.0rem; color: red;}
 .toon2 {position: relative; top: -80px; width: 579px; height: 537px; background: url(../image/intro/Rectangle2.png) no-repeat;}
 .toon3 {position: relative; top: -562px; left: 520px; width: 502px; height: 419px; background: url(../image/intro/Rectangle3.png) no-repeat;}
 .toon4 {position: relative; top: -532px; left: 150px; width: 501px; height: 244px; background: url(../image/intro/Rectangle4.png) no-repeat;}
 .toon5 {position: relative; top: -810px; left: 635px; width: 387px; height: 275px; background: url(../image/intro/Rectangle5.png) no-repeat;}
 
 #section-portfolio {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-end;}
-.portfolio-label {position: relative; right: 0; width: 200px; height: 1600px; background-color: #6d597a; box-shadow: -4px 0 5px rgba(0,0,0,0.3);}
+.portfolio-label {position: relative; right: 0; width: 200px; background-color: #6d597a; box-shadow: -4px 0 5px rgba(0,0,0,0.3);}
 .portfolio-label h3 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.2rem; font-weight: 400; text-align: center;}
-.portfolio-main {position: static; width: calc( 100% - 200px); padding-top: 15px;}
+.portfolio-main {position: static; width: calc( 100% - 200px); padding: 15px 20px;}
 .portfolio-main div {position: relative; display: flex; flex-wrap: wrap; margin-bottom: 30px;}
-.portfolio-main div > ul {position: relative; display: flex; flex-wrap: nowrap; padding-left: 40px;}
+.portfolio-main div > ul {position: relative; display: flex; flex-wrap: nowrap;}
 
 .pf-nav {font-size: 0.9rem; position: relative; display: flex; justify-content: flex-end; right: 15px;}
 .pf-nav li > a {padding: 0 5px; margin: 0 2px;}
@@ -28,12 +34,12 @@
 #pf-illust li {width: 120px ; height: 480px; margin-right: 5px; background-color: #ccc;}
 #pf-illust a:hover {opacity: 0.7;}
 .web-prvtext {width: 500px;}
-.web-prvimg img{width: 50%;}
+.web-prvimg img{width: 100%;}
 
 
-#section-about {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-start;}
-.about-label {width: 400px; height: 1000px; background-color: #355070; box-shadow: 4px 0 5px rgba(0,0,0,0.3);}
-.about-label h3 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.2rem; font-weight: 400; text-align: center; line-height: 1000px;}
+#section-about {position: relative; display: flex; flex-wrap: nowrap; justify-content: flex-start;height: 600px;}
+.about-label {width: 400px; background-color: #355070; box-shadow: 4px 0 5px rgba(0,0,0,0.3);}
+.about-label h3 {font-family: "TmoneyRoundWindRegular"; color: #fff; font-size: 1.2rem; font-weight: 400; text-align: center; line-height: 600px;}
 .about-main {position: relative; display: flex; flex-wrap: nowrap; justify-content: space-between; padding-top: 80px; padding-left: 40px;}
 #aboutco {width: 240px; height: 240px; border-radius: 120px; overflow: hidden;}
 
