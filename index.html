@@ -9,20 +9,71 @@
   <!--[if lt IE 9]>
       <script src="js/html5.js"></script>
    <![endif]-->
-<!-- Magnific Popup core CSS file -->
-<!-- link rel="stylesheet" href="magnific-popup/magnific-popup.css" -->
-<!-- Magnific Popup core JS file -->
-<script src="magnific-popup/jquery.magnific-popup.js"></script>
-
 <script src="js/jquery-3.1.1.min.js">  </script>
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link href="css/common.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!-- link rel="stylesheet" type="text/css" href="css/demo.css" / -->
 <link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" href="css/magnific-popup.css">
+
 <script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+
 <script type="text/javascript" src="js/dynamicscrollspy.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var menu = $(".pf-nav li");
+   	var content = $(".portfolio-main > div");
+	
+	menu.click(function(){
+		event.preventDefault();
+		var tg = $(this);
+		var idx = tg.index();
+		var section = content.eq(idx);
+		var tt = section.offset().top;
+
+		//스크롤이 tt의 값에 맞게 움직이게
+		$("html,body").stop().animate({scrollTop:tt});
+		});//menu.click() 끝
+		
+		// 윈도우에서 scroll() 스크롤이 작동될 때 일어날 일.
+		$(window).scroll(function(){
+		var location = $(window).scrollTop();
+		
+		content.each(function() {
+			//반복문(each)
+      var tg = $(this);
+			var idx = tg.index();
+			
+			if(tg.offset().top <= location){  //active 위치가 안맞으면 location + 위치값 을 추가하면 됨
+				menu.removeClass("active");
+				menu.eq(idx).addClass("active");
+				}
+
+    });//each() 끝
+		
+			
+			});//scroll() 끝
+
+    $(window).scroll(function(){
+        var sec = $('#section-portfolio').offset().top;
+        var sec_about = $('#section-about').offset().top - 200;
+       
+        if ($(document).scrollTop() >= sec && $(document).scrollTop() <= sec_about) {
+          $('.portfolio-label').css({position:'fixed'})
+            //$('.portfolio-label').fadeIn();
+         } else {
+           //  $('.portfolio-label').fadeOut();
+           $('.portfolio-label').css({position:'absolute'});
+          
+         }
+      }) //scroll 
+  });
+  </script>
+
 </head>
 
 <body>
@@ -46,51 +97,32 @@
   </section>
   <section id="section-portfolio">
     <div class="portfolio-main" data-aos="fade-right" data-aos-duration="500" data-aos-delay="1000">
-      <div class="pf-nav" id="CoIllust">
-        <ul>
-          <li><b>Illust</b></li>
-          <li><a href="#CoWeb">Web Design</a></li>
-          <li><a href="#CoOther">Other Works</a></li>
-        </ul>
-      </div>
 
-      <div class="grid-wrap">
-        <ul class="grid swipe-right" id="grid">
-          <li><a href="./image/pf/m/test1.png"><img src="./image/pf/s/s-test1.jpg" alt=""><h3>A test title</h3></a></li>
-          <li><a href="./image/pf/m/test2.jpg"><img src="./image/pf/s/s-test2.jpg" alt=""><h3>A test title</h3></a></li>
-          <li><a href="./image/pf/m/test3.png"><img src="./image/pf/s/s-test3.jpg" alt=""><h3>A test title</h3></a></li>
-          <li><a href="./image/pf/m/test2.jpg"><img src="./image/pf/s/s-test2.jpg" alt=""><h3>A test title</h3></a></li>
-          <li><a href="./image/pf/m/test1.png"><img src="./image/pf/s/s-test1.jpg" alt=""><h3>A test title</h3></a></li>
-          <li><a href="./image/pf/m/test3.png"><img src="./image/pf/s/s-test3.jpg" alt=""><h3>A test title</h3></a></li>
-          <li><a href="./image/pf/m/test1.png"><img src="./image/pf/s/s-test1.jpg" alt=""><h3>A test title</h3></a></li>
+      <div class="grid-wrap" id="#CoIllust">
+        <ul class="grid swipe-right popup" id="grid">
+          <li><a href="./image/pf/m/test1.png" data-effect="mfp-move-horizontal"><img src="./image/pf/s/s-test1.jpg" alt=""><h3>A test title</h3></a></li>
+          <li><a href="./image/pf/m/test2.jpg" data-effect="mfp-move-horizontal"><img src="./image/pf/s/s-test2.jpg" alt=""><h3>A test title</h3></a></li>
+          <li><a href="./image/pf/m/test3.png" data-effect="mfp-move-horizontal"><img src="./image/pf/s/s-test3.jpg" alt=""><h3>A test title</h3></a></li>
+          <li><a href="./image/pf/m/test2.jpg" data-effect="mfp-move-horizontal"><img src="./image/pf/s/s-test2.jpg" alt=""><h3>A test title</h3></a></li>
+          <li><a href="./image/pf/m/test1.png" data-effect="mfp-move-horizontal"><img src="./image/pf/s/s-test1.jpg" alt=""><h3>A test title</h3></a></li>
+          <li><a href="./image/pf/m/test3.png" data-effect="mfp-move-horizontal"><img src="./image/pf/s/s-test3.jpg" alt=""><h3>A test title</h3></a></li>
+          <li><a href="./image/pf/m/test1.png" data-effect="mfp-move-horizontal"><img src="./image/pf/s/s-test1.jpg" alt=""><h3>A test title</h3></a></li>
         </ul>        
       </div>
-      <div class="pf-nav"  id="CoWeb">
-        <ul>
-          <li><a href="#CoIllust">Illust</a></li>
-          <li><b>Web Design</b></li>
-          <li><a href="#CoOhter">Other Works</a></li>
-        </ul>
-      </div>
-      <div>
-        <ul id="pf-web">
+
+      <div id="CoWeb">
+        <ul class="pf-flex">
+          <li class="web-prvimg"><img src="./image/pf/s/s-test1.jpg" alt="" class="popup"></li>
           <li class="web-prvtext">
             <h3>test</h3>
             <p>테스트 메시지입니다테스트 메시지입니다테스트 메시지입니다테스트 메시지입니다테스트 메시지입니다테스트 메시지입니다</p>
             <a href="#">BX</a> <a href="#">Website</a>
           </li>
-          <li class="web-prvimg"><a href=""><img src="./image/pf/s/s-test1.jpg" alt=""></a></li>
         </ul> 
       </div>
-      <div class="pf-nav"  id="CoWeb">
-        <ul>
-          <li><a href="#CoIllust">Illust</a></li>
-          <li><a href="#CoWeb">Web Design</a></li>
-          <li><b>Other Works</b></li>
-        </ul>
-      </div>
-      <div>
-        <ul id="pf-web">
+
+      <div id="CoOhter">
+        <ul class="pf-flex">
           <li class="web-prvtext">
             <h3>test</h3>
             <p>테스트 메시지입니다테스트 메시지입니다테스트 메시지입니다테스트 메시지입니다테스트 메시지입니다테스트 메시지입니다</p>
@@ -102,6 +134,13 @@
     </div>
     <div class="portfolio-label" data-aos="fade-left" data-aos-delay="500">
       <h3 data-aos="fade-left" data-aos-delay="1000">Portfolio</h3>
+      <div class="pf-nav">
+        <ul>
+          <li><a href="#CoIllust">Illust</a></li>
+          <li><a href="#CoWeb">Web Design</a></li>
+          <li><a href="#CoOhter">Other Works</a></li>
+        </ul>
+      </div>
     </div>
   </section>
   <section id="intervalB" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
@@ -123,12 +162,17 @@
           Adobe Photoshop Illurstrator After Effects
           SAI
         </div>
+        <div>
       </div>
       <div id="aboutco"><img src="./image/about_cocoairo.png"></div>
+      <div>textassasdaasdasda</div>
     </div>
   </section>
+  <section id="intervalC">
+  </section>
   <footer id="footer">
-    
+    <div class="footer-txt">text</div>
+    <div class="footer-col" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" data-aos-offset="0"></div>
   </footer>
 </div>
 <script src="js/masonry.pkgd.min.js"></script>
@@ -146,5 +190,23 @@
 <script>
   AOS.init();
 </script>
+<script>
+  // Image popups
+  $('.popup').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    callbacks: {
+      beforeOpen: function() {
+        // just a hack that adds mfp-anim class to markup 
+         this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+         this.st.mainClass = this.st.el.attr('data-effect');
+      }
+    },
+    closeOnContentClick: true,
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  });
+
+  </script>
 </body>
 </html>
